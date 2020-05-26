@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Notification Tutorial</string>
+    <string name="simple_notification">simple notification</string>
 </resources>
