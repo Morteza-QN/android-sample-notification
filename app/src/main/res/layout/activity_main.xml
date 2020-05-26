@@ -10,7 +10,7 @@
     <Button
         android:id="@+id/btn_main_simpleNotification"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
+        android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:text="@string/simple_notification"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,7 +22,7 @@
     <Button
         android:id="@+id/btn_main_bigPicStyle"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
+        android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/big_pic_style_notification"
@@ -33,8 +33,9 @@
     <Button
         android:id="@+id/btn_main_inboxStyle"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
+        android:layout_width="256dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/inbox_style_notification"
         app:layout_constraintEnd_toEndOf="@+id/btn_main_simpleNotification"
         app:layout_constraintHorizontal_bias="0.509"
@@ -44,7 +45,7 @@
     <Button
         android:id="@+id/btn_main_bigTextStyle"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="wrap_content"
+        android:layout_width="256dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/big_text_style_notification"

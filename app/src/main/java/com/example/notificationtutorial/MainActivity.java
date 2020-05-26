@@ -23,10 +23,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button SimpleNotifyBtn = findViewById(R.id.btn_main_simpleNotification);
         Button bigPicNotifyBtn = findViewById(R.id.btn_main_bigPicStyle);
-        Button bigTextNotify   = findViewById(R.id.btn_main_inboxStyle);
+        Button bigTextNotify   = findViewById(R.id.btn_main_bigTextStyle);
+        Button inboxNotify     = findViewById(R.id.btn_main_inboxStyle);
         SimpleNotifyBtn.setOnClickListener(this);
         bigPicNotifyBtn.setOnClickListener(this);
         bigTextNotify.setOnClickListener(this);
+        inboxNotify.setOnClickListener(this);
     }
 
     @Override
@@ -52,17 +54,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher)).setStyle(
                                 new NotificationCompat.BigPictureStyle()
                                         .bigPicture(BitmapFactory.decodeResource(getResources(), R.drawable.banner))
-                                        .setBigContentTitle("big picture style"))
-                        .setContentTitle("My notification test").setContentText("this is my first notification").build();
+                                        .setBigContentTitle("big picture style")).setContentTitle("My notification test")
+                        .setContentText("this is my first notification").build();
                 if (notificationManager != null) {
                     notificationManager.notify(NOTIFICATION_ID, bigPicNotification);
                 }
                 break;
             case R.id.btn_main_bigTextStyle:
                 Notification bigTextNotification = new NotificationCompat.Builder(this, App.KEY_MY_CHANNEL_ID)
-                        .setSmallIcon(android.R.drawable.stat_notify_chat)
-                        .setStyle(new NotificationCompat.BigTextStyle().bigText(
-                                "this is my first notification this is my first notification this is my first notification this is my first notification this is my first notification this is my first notification this is my first notification this is my first notification "))
+                        .setSmallIcon(android.R.drawable.stat_notify_chat).setStyle(new NotificationCompat.BigTextStyle()
+                                .bigText(
+                                        "this is my first notification this is my first notification this is my first notification this is my first notification this is my first notification this is my first notification this is my first notification this is my first notification "))
                         .setContentTitle("My notification test").setContentText("this is my first notification").build();
                 if (notificationManager != null) {
                     notificationManager.notify(NOTIFICATION_ID, bigTextNotification);
@@ -70,11 +72,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_main_inboxStyle:
                 Notification inboxNotification = new NotificationCompat.Builder(this, App.KEY_MY_CHANNEL_ID)
-                        .setSmallIcon(android.R.drawable.stat_notify_chat)
-                        .setStyle(new NotificationCompat.InboxStyle().addLine("this is my first notification")
-                                                                     .addLine("this is my 2 notification")
-                                                                     .addLine("this is my 3 notification")
-                                                                     .addLine("this is my 4 notification"))
+                        .setSmallIcon(android.R.drawable.stat_notify_chat).setStyle(
+                                new NotificationCompat.InboxStyle().addLine("this is my first notification")
+                                                                   .addLine("this is my 2 notification")
+                                                                   .addLine("this is my 3 notification")
+                                                                   .addLine("this is my 4 notification"))
                         .setContentTitle("My notification test").build();
                 if (notificationManager != null) {
                     notificationManager.notify(NOTIFICATION_ID, inboxNotification);
