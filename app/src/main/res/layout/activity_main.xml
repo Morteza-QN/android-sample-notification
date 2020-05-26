@@ -18,4 +18,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.19999999" />
+
+    <Button
+        android:id="@+id/btn_main_bigPicStyle"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/big_pic_style_notification"
+        app:layout_constraintEnd_toEndOf="@+id/btn_main_simpleNotification"
+        app:layout_constraintStart_toStartOf="@+id/btn_main_simpleNotification"
+        app:layout_constraintTop_toBottomOf="@+id/btn_main_simpleNotification" />
+
+    <Button
+        android:id="@+id/btn_main_inboxStyle"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/inbox_style_notification"
+        app:layout_constraintEnd_toEndOf="@+id/btn_main_simpleNotification"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/btn_main_simpleNotification"
+        app:layout_constraintTop_toBottomOf="@+id/btn_main_bigTextStyle" />
+
+    <Button
+        android:id="@+id/btn_main_bigTextStyle"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/big_text_style_notification"
+        app:layout_constraintEnd_toEndOf="@+id/btn_main_simpleNotification"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@+id/btn_main_simpleNotification"
+        app:layout_constraintTop_toBottomOf="@+id/btn_main_bigPicStyle" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
